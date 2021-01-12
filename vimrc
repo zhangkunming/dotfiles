@@ -8,7 +8,19 @@ set nocompatible
 " 开启语法高亮
 syntax on
 
-" 关闭 Vim 默认的启动信息
+" 根据文件类型加载插件
+filetype plugin indent on
+
+" 根据上一行进行缩进
+set autoindent
+
+" 使用空格代替tabs
+set expandtab
+
+" Tab键缩进4个空格
+set softtabstop=4
+
+ "关闭 Vim 默认的启动信息
 set shortmess+=I
 
 " 显示行号
@@ -26,8 +38,11 @@ set backspace=indent,eol,start
 " 允许直接关闭 buffer
 set hidden
 
+
 set ignorecase
 set smartcase
+
+
 set incsearch
 
 " 关闭声音，除非有一天支持东京热
@@ -46,6 +61,10 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
+
+
+
+
 
 
 
