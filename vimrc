@@ -1,72 +1,118 @@
-" 
-" This is zhangkunming's vimrc.
-" 
+" this is zhangkunming's vimrc
 
-" 关闭兼容模式
+
+" ====================
+" === Editor Setup ===
+" ====================
+
+" ===
+" === System
+" ===
 set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set mouse=a
+set encoding=utf-8
 
-" 开启语法高亮
+" ===
+" === Main code display
+" ===
+set number
+set relativenumber
+set ruler
+set cursorline
+syntax enable
 syntax on
 
-" 根据文件类型加载插件
-filetype plugin indent on
-
-" 根据上一行进行缩进
-set autoindent
-
-" 使用空格代替tabs
+" ===
+" === Editor behavior
+" ===
+" Better tab
 set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set list
+set listchars=tab:▸\ ,trail:▫
+set scrolloff=5
 
-" Tab键缩进4个空格
-set softtabstop=4
+" Prevent auto line split
+set wrap
+set tw=0
 
- "关闭 Vim 默认的启动信息
-set shortmess+=I
 
-" 显示行号
-set number
-
-" 相对行号模式
-set relativenumber
-
-" 在底部显示状态
-set laststatus=2
-
-" 让退格键正常使用
+set indentexpr=
+" Better backspace
 set backspace=indent,eol,start
 
-" 允许直接关闭 buffer
-set hidden
+set foldmethod=indent
+set foldlevel=99
 
 
+" ===
+" === Window behaviors
+" ===
+set splitright
+set splitbelow
+
+
+" ===
+" === Status/command bar
+" ===
+set laststatus=2
+set autochdir
+set showcmd
+set formatoptions-=tc
+
+
+
+" Show command autocomplete
+set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
+set wildmenu
+set wildmode=longest,list,full
+
+
+" Searching options
+set hlsearch
+exec "nohlsearch"
+set incsearch
 set ignorecase
 set smartcase
 
 
-set incsearch
+" ===
+" === Basic Mappings
+" ===
 
-" 关闭声音，除非有一天支持东京热
-set noerrorbells visualbell t_vb=
-
-" 开启鼠标支持
-set mouse+=a
-
-" 使用 h,j,k,l
-nnoremap <Left>  :echoe "Use h"<CR>
-nnoremap <Right> :echoe "Use l"<CR>
-nnoremap <Up>    :echoe "Use k"<CR>
-nnoremap <Down>  :echoe "Use j"<CR>
-
-inoremap <Left>  <ESC>:echoe "Use h"<CR>
-inoremap <Right> <ESC>:echoe "Use l"<CR>
-inoremap <Up>    <ESC>:echoe "Use k"<CR>
-inoremap <Down>  <ESC>:echoe "Use j"<CR>
+" Set <LEADER> as <SPACE>
+let mapleader=" "
 
 
 
+" ===
+" === Install Plugins with Vim-Plug
+" ===
+call plug#begin('~/.vim/plugged')
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+
+" File navigation
+Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 
 
+" Git
+Plug 'rhysd/conflict-marker.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
+
+
+call plug#end()
 
 
 
