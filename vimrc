@@ -1,11 +1,11 @@
-" this is zhangkunming's vimrc
-
 "       .__
 " ___  _|__| ____________   ____
 " \  \/ /  |/     \_  __ \_/ ___\
 "  \   /|  |  Y Y  \  | \/\  \___
 "   \_/ |__|__|_|  /__|    \___  >
 "                \/            \/
+"
+" this is zhangkunming's vimrc
 
 " ====================
 " === Editor Setup ===
