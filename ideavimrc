@@ -5,7 +5,7 @@
 " |  / /_/ \  ___/ / __ \\   /|  |  Y Y  \  | \/\  \___
 " |__\____ |\___  >____  /\_/ |__|__|_|  /__|    \___  >
 "         \/    \/     \/              \/            \/
-" 
+"
 
 let mapleader = ","   " leader is comma
 let localleader = "," " leader is comma

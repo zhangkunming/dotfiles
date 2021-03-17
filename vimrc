@@ -43,6 +43,7 @@ set softtabstop=2
 set list
 set listchars=tab:▸\ ,trail:▫
 set scrolloff=5
+set clipboard=unnamed
 
 " Prevent auto line split
 set wrap
