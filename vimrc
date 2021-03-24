@@ -105,19 +105,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-
 " File navigation
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'Xuyuanp/nerdtree-git-plugin'
-
-
 
 " Git
 Plug 'rhysd/conflict-marker.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'mhinz/vim-signify'
 Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
-
 
 call plug#end()
 
