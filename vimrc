@@ -23,6 +23,9 @@ endif
 " === Editor Setup ===
 " ====================
 
+" Set <LEADER> as <SPACE>
+let mapleader=" "
+
 " ===
 " === System
 " ===
@@ -99,14 +102,12 @@ exec "nohlsearch"
 set incsearch
 set ignorecase
 set smartcase
+map <LEADER><CR> :nohlsearch<CR>
 
 
 " ===
 " === Basic Mappings
 " ===
-
-" Set <LEADER> as <SPACE>
-let mapleader=" "
 
 
 
